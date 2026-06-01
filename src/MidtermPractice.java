@@ -53,9 +53,15 @@ public class MidtermPractice {
      * Example: input: [1.5, 3.5, 2.0, 3.0] -> output: 2.5
      */
     public static double findAverage(float[] arr) {
-        return -1.0;
+    double sum = 0.0;
+
+    for (float num : arr) {
+        sum += num;
     }
 
+    return sum / arr.length;
+    
+    }
     /**
      * Counts how many odd numbers there are in the values of a Map.
      * @param map a HashMap of String keys and Integer values
@@ -63,7 +69,15 @@ public class MidtermPractice {
      * Example: input: {"a"=7, "x"=4, "z"=5} -> output: 2
      */
     public static int countOddNumbers(Map<String, Integer> map) {
-        return -1;
+        int count = 0;
+
+        for (int value : map.values()) {
+            if (value % 2 != 0) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
     /**
