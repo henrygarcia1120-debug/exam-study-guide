@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -56,9 +57,15 @@ public class MidtermPractice {
      * Example: input: [3, 6, 9] -> output: true
      * Example 2: input: [3, 4, 6, 9] -> output: false
      */
-    public static boolean allDivisibleBy3(int[] arr) {
-        return false;
+   public static boolean allDivBy3(int[] arr) {
+    for (int n : arr) {
+        if (n % 3 != 0) {
+            return false;
+        }
     }
+
+    return true;
+}
 
     /**
      * Returns true if all words start with 'a' in an ArrayList of Strings.
@@ -67,9 +74,14 @@ public class MidtermPractice {
      * Example: input: ["apple", "apricot", "avocado"] -> output: true
      * Example: input: ["apple", "banana", "avocado"] -> output: false
      */
-    public static boolean allStartWithA(List<String> list) {
-        return false;
+    public static boolean allStartWithA(ArrayList<String> list) {
+    for (String word : list) {
+        if (!word.startsWith("a")) {
+            return false;
+        }
     }
+    return true;
+}
 
     /**
      * OPTIONAL MORE CHALLENGING PROBLEM
